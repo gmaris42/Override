@@ -12,17 +12,17 @@ undefined8 main(void)
   
   fd = 0;
   ret = 0;
-  fd = fopen("/home/users/level03/.pass",&DAT_00400bb0,&DAT_00400bb0);
+  fd = fopen("/home/users/level03/.pass", "r", "r");
   if (fd == 0)
   {
-    fwrite("ERROR: failed to open password file\n",1,36,stderr);
+    fwrite("ERROR: failed to open password file\n",1,36,2);
     exit(1);
   }
   ret = fread(target,1,41, local_10);
   if (ret != 41)
   {
-    fwrite("ERROR: failed to read password file\n",1,36,stderr);
-    fwrite("ERROR: failed to read password file\n",1,36,stderr);
+    fwrite("ERROR: failed to read password file\n",1,36,2);
+    fwrite("ERROR: failed to read password file\n",1,36,2);
     exit(1);
   }
   fclose(local_10);
@@ -31,9 +31,9 @@ undefined8 main(void)
   puts("| You must login to access this system. |");
   puts("\\**************************************/");
   printf("--[ Username: ");
-  fgets(username,100,stdin);
+  fgets(username,100,0);
   printf("--[ Password: ");
-  fgets(lpassword,100,stdin);
+  fgets(password,100,0);
   puts("*****************************************");
   if (strncmp(target, password, 41) == 0)
   {
