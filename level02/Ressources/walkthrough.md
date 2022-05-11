@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+0x756e505234376848 0x45414a3561733951 0x377a7143574e6758 0x354a35686e475873 0x48336750664b394d
+
+756e505234376848 45414a3561733951 377a7143574e6758 354a35686e475873 48336750664b394d
+
+unPR47hHEAJ5as9Q7zqCWNgX5J5hnGXsH3gPfK9M
+
+unPR47hH
+
+Hh74RPnuQ9sa5JAEXgNWCqz7sXGnh5J5M9KfPg3H
+=======
 We get the binary out of the Vm using this cmd:
 
 `scp -P 4242 level2@192.168.56.103:./level2 .binary/level2`
@@ -49,3 +60,4 @@ Now we convert
 We just need to reverse them now and we get
 `Hh74RPnu` `Q9sa5JAE` `XgNWCqz7` `sXGnh5J5` `M9KfPg3H`
 `Hh74RPnuQ9sa5JAEXgNWCqz7sXGnh5J5M9KfPg3H`
+>>>>>>> 655bebc034947e79de8b9192b7aa3c1fd12dbeb8
