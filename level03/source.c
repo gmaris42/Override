@@ -1,26 +1,24 @@
 int main(void)
 {
 	int val;
-	int ret;
 	srand(time(0));
 	puts("***********************************");
 	puts("*\t\tlevel03\t\t**");
 	puts("***********************************");
 	printf("Password:");
-	ret = scanf("%d", val);
-	test(ret, val);
+	scanf("%d", val);
+	test(val, 322424845);
 	return 0;
 }
-void test(int ret,int val)
+void test(int val,int nb)
 {
 	int uVar1;
 	
-	val = val - ret;
+	val = nb - val;
 
 	switch(val) {
 	default:
-		uVar1 = rand();
-		decrypt(uVar1);
+		decrypt(rand());
 		break;
 	case 1:
 		decrypt(val);
