@@ -76,10 +76,10 @@ void decrypt(int param_1)
 	int len = 17;
 	while(i < 17)
 	{
-		str_crypt[i] = str_crypt[i] ^ param_1;
+		str_crypt[i] = param_1 ^ str_crypt[i] ;
 		++i;
 	}
-	if (strcmp(str_crypt, "Congratulations") == 0)
+	if (strcmp(str_crypt, "Congratulations!") == 0)
 		system("/bin/sh");
 	else
 		puts("\nInvalid Password");

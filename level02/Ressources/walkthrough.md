@@ -1,6 +1,6 @@
 We get the binary out of the Vm using this cmd:
 
-`scp -P 4242 level3@192.168.56.103:./level3 .binary/level3`
+`scp -P 4242 level2@192.168.56.103:./level2 .binary/level2`
 
 We can see line 44 in the source.c we can use a format string attack so let's find where on the stack our password id :
 ```
