@@ -42,7 +42,7 @@ int store_number(char *buffer)
 		puts(" *** ERROR! ***");
 		return 1;
 	}
-	buffer[index] = number;
+	buffer[index * 4] = number;
 	return 0;
 }
 
@@ -52,7 +52,7 @@ int read_number(char *buffer)
 
 	printf(" Index:");
 	index = get_unum();
-	printf(" Number at data[%u] is %u\n", index, buffer[index]);
+	printf(" Number at data[%u] is %u\n", index, buffer[index * 4]);
 	return 0;
 }
 
@@ -65,12 +65,14 @@ int main(int argc, char **argv, char **env)
 	char cmd_buffer[20] = "";
 	int i = 0;
 
-	while (av[i]) {
+	while (av[i])
+	{
 		memset(av[i], 0, strlen(av[i]));
 		++i;
 	}
 	i = 0;
-	while (ep[i]) {
+	while (ep[i])
+	{
 		memset(ep[i], 0, strlen(ep[i]));
 		i++;
 	}
@@ -86,7 +88,7 @@ int main(int argc, char **argv, char **env)
 		else if (!strncmp(cmd_buffer, "read", 4))
 			ret = read_number(buffer);
 		else if (!strncmp(cmd_buffer, "quit", 4))
-			return 0;
+			break ;
 		if (ret == 0)
 			printf(" Completed %s command successfully\n", &cmd_buffer);
 		else
