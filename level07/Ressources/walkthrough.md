@@ -35,8 +35,8 @@ since we can't put at 114 (cause 114 % 3 == 0), we need to overflow unsigned int
 So at index `1073741938` we store `4159090384`\
    at index `115`		 we store `4159040368`\
    at index `116`		 we store `4160264172`\
-We can now exit and have a shell :D
-```
+We can now quit and have a shell :D
+```s
 $ cat /home/users/level08/.pass
 7WJ6jFBzrcjEYXudxnM3kdW7n3qyxR6tk2xGrkSC
 ```

@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 
 With it we find that login `hello42` get serial `6233701`
 
-```
+```s
 **********************************
 *               level06           *
 ***********************************

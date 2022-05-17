@@ -49,3 +49,8 @@ Now we convert
 We just need to reverse them now and we get
 `Hh74RPnu` `Q9sa5JAE` `XgNWCqz7` `sXGnh5J5` `M9KfPg3H`
 `Hh74RPnuQ9sa5JAEXgNWCqz7sXGnh5J5M9KfPg3H`
+
+```s
+$ cat /home/users/level03/.pass
+Hh74RPnuQ9sa5JAEXgNWCqz7sXGnh5J5M9KfPg3H
+```
